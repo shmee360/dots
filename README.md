@@ -41,6 +41,10 @@ Something to consider will be automatic plugin manager installation like
 ## TODO:
 - [ ] neovim
 	- [x] vimrc and basics
+	- [x] Linux clipboard for non-WSL systems
+		- [ ] ~~maybe automatic clipboard installation too?~~
+			- this is actually quite stupid and doesn't need to be done
+	- [ ] ~~automated ccls install~~
 	- [ ] automated installer
 - [ ] mpv
 - [ ] bash

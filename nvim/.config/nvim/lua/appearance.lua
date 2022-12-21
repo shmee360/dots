@@ -36,6 +36,8 @@ o.termguicolors = true
 g.gruvbox_guisp_fallback = "bg"
 cmd('colo gruvbox')
 
+require'colorizer'.setup()
+
 cmd('au FileType rmd,rmarkdown setlocal commentstring=<!--%s-->')
 
 o.spellsuggest = "best,9"

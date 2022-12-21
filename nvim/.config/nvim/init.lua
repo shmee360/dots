@@ -66,6 +66,8 @@ require 'paq' {
 	'kyazdani42/nvim-tree.lua';
 	'akinsho/bufferline.nvim';
 	'romgrk/barbar.nvim';
+
+	'norcalli/nvim-colorizer.lua';
 }
 
 function isWin()

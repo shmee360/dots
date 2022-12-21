@@ -24,7 +24,7 @@ else
 	end
 
 	-- If we're in WSL
-	if fn.executable('win32yank.exe') then
+	if fn.executable('win32yank.exe') ~= 0 then
 		-- https://superuser.com/a/1557751 (fixing wsl)
 		-- win32yank MUST BE INSTALLED FROM SOURCE AND PUT IN THE PATH
 		g.clipboard = {
