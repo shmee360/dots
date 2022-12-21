@@ -1,0 +1,27 @@
+[init]
+	defaultBranch = master
+
+[user]
+	email = me@warrenstix.xyz
+	name = Warren Stix
+[include]
+	path = key.gitconfig
+
+[alias]
+	graph = log --graph --decorate --all
+	alias = config --get-regexp alias.
+	fix = commit --amend --no-edit
+	fixm = commit --amend -am
+	gom = commit -am
+	check = !git add -A && git status
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgSign = true
+
+[tag]
+	gpgSign = true
+# [gpg]
+	# program = gpg2
