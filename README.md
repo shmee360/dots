@@ -46,6 +46,7 @@ Something to consider will be automatic plugin manager installation like
 			- this is actually quite stupid and doesn't need to be done
 	- [ ] ~~automated ccls install~~
 	- [ ] automated installer
+- [ ] volume script with signal for dwmblocks
 - [ ] mpv
 - [ ] bash
 - [ ] xorg
