@@ -10,8 +10,17 @@ A program literally everyone needs. It has some basic authentication and gpg stu
 I haven't quite figured this one out, but I can at least maybe save the config
 file for Haskell Stack?
 
+## Neovim
+I've lovingly crafted this horrific mess of a vimrc for about two years on
+and off, but now I'm beginning to like it.
+
+Something to consider will be automatic plugin manager installation like
+[this](https://github.com/LukeSmithxyz/voidrice/blob/master/.config/nvim/init.vim)
+
 ## TODO:
 - [ ] neovim
+	- [x] vimrc and basics
+	- [ ] automated installer
 - [ ] mpv
 - [ ] bash
 - [ ] xorg
