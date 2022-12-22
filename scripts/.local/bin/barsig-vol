@@ -1,0 +1,37 @@
+#!/bin/bash
+
+DELTA="5%"
+BASE_SIG=34
+
+POSITIONAL_ARGS=()
+
+while [[ $# -gt 0 ]]; do
+	case $1 in
+		-u|--volume-up)
+			DIRECTION="+"
+			shift
+			;;
+		-d|--volume-down)
+			DIRECTION="-"
+			shift
+			;;
+		-s|signal)
+			NEW_SIG="$2"
+			shift
+			shift
+			;;
+		-*|--*)
+			echo "Unknown option $1"
+			exit 1
+			;;
+		*)
+			POSITIONAL_ARGS+=("$1")
+			shift
+			;;
+	esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+
+amixer -q sset Master "$DELTA$DIRECTION" &&
+kill -$(($BASE_SIG + $NEW_SIG)) $(pidof dwmblocks)
