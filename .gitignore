@@ -1,3 +1,6 @@
 key.gitconfig
 .netrwhist
 autoload
+
+mpvhistory.log
+watch_later/
