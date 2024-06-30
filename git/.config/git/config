@@ -19,10 +19,10 @@
 	rebase = false
 
 [commit]
-	gpgsign = false
+	;  gpgsign = true
 
 [tag]
-	gpgsign = false
+	;  gpgsign = true
 
 [gpg]
 	program = gpg2

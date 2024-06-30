@@ -1,6 +1,6 @@
 #!/bin/sh
 
-userresources=$HOME/.Xresources
+userresources=${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
@@ -25,6 +25,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+setxkbmap -layout ca -variant eng
+
 # start some nice programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -45,7 +47,11 @@ picom -f &
 
 dwmblocks &
 
-feh --bg-center dl/DSC_0001.JPG &
+feh --bg-center ~/pics/maui/107D5600/DSC_0077.JPG &
+
+#  btpd &
 
 # DWM
-exec dwm
+while :; do
+	ssh-agent dwm
+done

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#portrait (left)
+
+xrandr -o left
+#  xinput set-prop "CUST0000:00 04F3:241E" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+#  xinput set-prop "DELL0950:00 04F3:30E3 Touchpad" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+xinput set-prop "CUST0000:00 04F3:241E" --type=float "Coordinate Transformation Matrix" 0 1 -1 -1 0 0 0 0 -1
+xinput set-prop "DELL0950:00 04F3:30E3 Touchpad" --type=float "Coordinate Transformation Matrix" 0 1 1 -1 0 0 0 0 -1

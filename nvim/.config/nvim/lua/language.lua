@@ -114,6 +114,9 @@ lspconfig.ccls.setup{}
 -- GDscript
 lspconfig.gdscript.setup{}
 
+-- C#
+require'lspconfig'.csharp_ls.setup{}
+
 cmd('au BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)')
 
 cmd('au CursorHold * lua vim.diagnostic.open_float()')

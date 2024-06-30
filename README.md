@@ -32,7 +32,7 @@ I haven't quite figured this one out, but I can at least maybe save the config
 file for Haskell Stack?
 
 ## Neovim
-I've lovingly crafted this horrific mess of a vimrc for about two years on
+I've lovingly crafted this horrific mess of a vimrc for about three years on
 and off, but now I'm beginning to like it.
 
 Something to consider will be automatic plugin manager installation like

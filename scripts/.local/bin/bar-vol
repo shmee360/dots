@@ -1,4 +1,4 @@
 #!/bin/sh
 
 amixer sget Master |
-awk -F"[][]" '/Left:/ { print $2 }'
+awk -F"[][]" '/Left:/ { if ($4 == "off") printf "%s %4s", "ﱝ", $2; else printf "%s %4s", "墳", $2 }'

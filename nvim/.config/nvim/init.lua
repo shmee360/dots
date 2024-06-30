@@ -56,7 +56,7 @@ require 'paq' {
 	'vim-pandoc/vim-pandoc';
 	'vim-pandoc/vim-pandoc-syntax';
 	'vim-pandoc/vim-rmarkdown';
-	{"nvim-treesitter/nvim-treesitter", run=function() cmd("TSUpdate") end};
+	{"nvim-treesitter/nvim-treesitter", build=function() cmd("TSUpdate") end};
 
 	'junegunn/goyo.vim';
 	'mattn/emmet-vim';

@@ -1,0 +1,106 @@
+# mkdir temp
+# cd temp
+# unzip ../whatever.epub
+# ~ make changes ~
+# zip -Xr9D ../whatever1.epub mimetype *
+
+set font						"monospace normal 24"
+map D toggle_page_mode
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 100
+set selection-clipboard clipboard
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map <Button8> navigate previous
+map <Button9> navigate next
+map <Button2> toggle_statusbar
+set sandbox none
+set default-bg					   "#ffffff" # bg
+
+#  # gruvbox light-hard
+#  set notification-error-bg       "#f2e5bc" # bg
+#  set notification-error-fg       "#9d0006" # bright:red
+#  set notification-warning-bg     "#f2e5bc" # bg
+#  set notification-warning-fg     "#b57614" # bright:yellow
+#  set notification-bg             "#f2e5bc" # bg
+#  set notification-fg             "#79740e" # bright:green
+
+#  set completion-bg               "#d5c4a1" # bg2
+#  set completion-fg               "#3c3836" # fg
+#  set completion-group-bg         "#ebdbb2" # bg1
+#  set completion-group-fg         "#928374" # gray
+#  set completion-highlight-bg     "#076678" # bright:blue
+#  set completion-highlight-fg     "#d5c4a1" # bg2
+
+#  # Define the color in index mode
+#  set index-bg                    "#d5c4a1" # bg2
+#  set index-fg                    "#3c3836" # fg
+#  set index-active-bg             "#076678" # bright:blue
+#  set index-active-fg             "#d5c4a1" # bg2
+
+#  set inputbar-bg                 "#f2e5bc" # bg
+#  set inputbar-fg                 "#3c3836" # fg
+
+#  set statusbar-bg                "#d5c4a1" # bg2
+#  set statusbar-fg                "#3c3836" # fg
+
+#  set highlight-color             "#b57614" # bright:yellow
+#  set highlight-active-color      "#af3a03" # bright:orange
+
+#  set default-bg                  "#f2e5bc" # bg
+#  set default-fg                  "#3c3836" # fg
+#  set render-loading              true
+#  set render-loading-bg           "#f2e5bc" # bg
+#  set render-loading-fg           "#3c3836" # fg
+
+#  # Recolor book content's color
+#  set recolor-lightcolor          "#f2e5bc" # bg
+#  set recolor-darkcolor           "#3c3836" # fg
+#  set recolor                     "true"
+# set recolor-keephue             true      # keep original color
+
+# gruvbox dark
+#  set notification-error-bg       "#282828" # bg
+#  set notification-error-fg       "#fb4934" # bright:red
+#  set notification-warning-bg     "#282828" # bg
+#  set notification-warning-fg     "#fabd2f" # bright:yellow
+#  set notification-bg             "#282828" # bg
+#  set notification-fg             "#b8bb26" # bright:green
+
+#  set completion-bg               "#504945" # bg2
+#  set completion-fg               "#ebdbb2" # fg
+#  set completion-group-bg         "#3c3836" # bg1
+#  set completion-group-fg         "#928374" # gray
+#  set completion-highlight-bg     "#83a598" # bright:blue
+#  set completion-highlight-fg     "#504945" # bg2
+
+#  # Define the color in index mode
+#  set index-bg                    "#504945" # bg2
+#  set index-fg                    "#ebdbb2" # fg
+#  set index-active-bg             "#83a598" # bright:blue
+#  set index-active-fg             "#504945" # bg2
+
+#  set inputbar-bg                 "#282828" # bg
+#  set inputbar-fg                 "#ebdbb2" # fg
+
+#  set statusbar-bg                "#504945" # bg2
+#  set statusbar-fg                "#ebdbb2" # fg
+
+#  set highlight-color             "#fabd2f" # bright:yellow
+#  set highlight-active-color      "#fe8019" # bright:orange
+
+#  set default-bg                  "#282828" # bg
+#  set default-fg                  "#ebdbb2" # fg
+#  set render-loading              true
+#  set render-loading-bg           "#282828" # bg
+#  set render-loading-fg           "#ebdbb2" # fg
+
+#  # Recolor book content's color
+#  set recolor-lightcolor          "#282828" # bg
+#  set recolor-darkcolor           "#ebdbb2" # fg
+#  set recolor                     "true"
+# set recolor-keephue             true      # keep original color

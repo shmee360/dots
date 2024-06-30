@@ -47,11 +47,11 @@ cmd('au FileType rmd,rmarkdown setlocal spell spelllang=en_ca')
 require 'nvim-treesitter.install'.compilers = {'clang', 'gcc'}
 require 'nvim-treesitter.configs'.setup {
 	ensure_installed = {
-		'c', 'cpp', 'css', 'commonlisp', 'cuda', 'dart', 'gdscript', 'glsl',
-		'go', 'godot_resource', 'haskell', 'html', 'java', 'javascript',
-		'json', 'jsonc', 'lua', 'markdown', 'markdown_inline', 'python', 'r',
-		'regex', 'rust', 'scss', 'sql', 'toml', 'tsx', 'typescript', 'vue',
-		'yaml'
+		'awk', 'bash', 'c', 'c_sharp', 'cpp', 'css', 'commonlisp', 'cuda',
+		'dart', 'gdscript', 'glsl', 'go', 'godot_resource', 'haskell', 'html',
+		'java', 'javascript', 'json', 'jsonc', 'lua', 'markdown',
+		'markdown_inline', 'python', 'r', 'regex', 'rust', 'scss', 'sql',
+		'toml', 'tsx', 'typescript', 'vue', 'yaml'
 	},
 	highlight = { enable = true },
 	indent = { enable = true },
@@ -88,7 +88,9 @@ cmd('filet plugin indent on')
 o.signcolumn = 'yes'
 
 -- Bufferline
-g.bufferline = { icon_pinned = '' }
+require'barbar'.setup {
+  icons = { pinned = { button = '' }},
+}
 
 -- Statusline
 o.showmode = false
@@ -152,7 +154,7 @@ function status_line()
 	local file_format = line_endings[api.nvim_buf_get_option(bufhandle, "fileformat")]
 	local line_count = api.nvim_buf_line_count(bufhandle)
 
-	local highlight = mode_highlights[mode][2]
+	local highlight = (mode == nil and '#fe8019' or mode_highlights[mode][2])
 	if highlight == nil then highlight = '#ebdbb2' end
 	
 	local modified = ''
@@ -220,7 +222,7 @@ function status_line()
 
 	local statusline = ""
 		.. " %#ModeSep#"
-		.. "%#ModeBg#" .. mode_highlights[mode][1]
+		.. "%#ModeBg#" .. (mode == nil and 'v·line' or mode_highlights[mode][1])
 		.. "%#ModeSep#"
 		.. " %#FileSep#%<"
 		.. "%#FileBack#%f" .. modified .. read_only .. preview
